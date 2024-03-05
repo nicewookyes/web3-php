@@ -8,6 +8,13 @@ class HttpProvider{
     public $response;
     private $id = 0;
 
+    public $url;
+
+    public function __construct($url)
+    {
+        $this->url = $url;
+    }
+
 
     public function __call($method, $params)
     {
@@ -31,7 +38,7 @@ class HttpProvider{
         // Build the cURL session
         $curl = curl_init();
         $headerArray = array("Content-type:application/json;charset='utf-8'", "Accept:application/json");
-        curl_setopt($curl, CURLOPT_URL, $this->provider);
+        curl_setopt($curl, CURLOPT_URL, $this->url);
         curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, FALSE);
         curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, FALSE);
         curl_setopt($curl, CURLOPT_POST, 1);

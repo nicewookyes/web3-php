@@ -1,7 +1,7 @@
 <?php
 
 namespace Qin\Web3Php\account;
-use Qin\Web3Php\eth_key\PrivateKey;
+use Qin\Web3Php\ethKey\PrivateKey;
 
 class Account
 {

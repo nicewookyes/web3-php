@@ -1,10 +1,13 @@
 <?php
-namespace Qin\Web3Php\eth_key;
+
+namespace Qin\Web3Php\ethKey;
+
 use Mdanter\Ecc\EccFactory;
 use Mdanter\Ecc\Serializer\PrivateKey\DerPrivateKeySerializer;
-use Qin\Web3Php\eth_utils\Conversions;
+use Qin\Web3Php\ethUtils\Conversions;
 
-class PrivateKey{
+class PrivateKey
+{
     private $key;
     public $publicKey;
     private const SIZE = 64;
@@ -15,7 +18,9 @@ class PrivateKey{
         if (empty ($privateKey)) {
             $this->key = $generator->createPrivateKey();
         } else {
-            $privateKey = Conversions::removeZeroPrefix($privateKey);
+            if (substr($privateKey, 0, 2) == "0x") {
+                $privateKey = substr($privateKey, 2);
+            }
             if (!ctype_xdigit($privateKey)) {
                 throw new InvalidArgumentException('Private key must be a hexadecimal number');
             }
@@ -30,7 +35,8 @@ class PrivateKey{
         $this->publicKey = new PublicKey($this->key->getPublicKey());
     }
 
-    public function hex(){
+    public function hex()
+    {
         return str_pad(gmp_strval($this->key->getSecret(), 16), self::SIZE, '0', STR_PAD_LEFT);
     }
 }

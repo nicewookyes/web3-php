@@ -1,5 +1,5 @@
 <?php
-namespace Qin\Web3Php\eth_key;
+namespace Qin\Web3Php\ethKey;
 use kornrunner\Keccak;
 use Mdanter\Ecc\EccFactory;
 use Mdanter\Ecc\Serializer\PublicKey\DerPublicKeySerializer;
