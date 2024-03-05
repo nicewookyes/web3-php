@@ -4,9 +4,9 @@ use Qin\Web3Php\eth_utils\Conversions;
 
 class Test{
     public function test(){
-        echo Conversions::to_bytes("你好啊");
+        echo Conversions::toBytes("你好啊");
         echo "\n";
-        echo Conversions::to_bytes("Hello");
+        echo Conversions::toBytes("Hello");
     }
 }
 

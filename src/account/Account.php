@@ -1,10 +1,16 @@
 <?php
+
 namespace Qin\Web3Php\account;
-class Account{
+use Qin\Web3Php\eth_key\PrivateKey;
+
+class Account
+{
     public $privateKey;
-    public $publicKey;
+    public $address;
 
-    public function create($extra=''){
-
+    public function __construct(string $privateKey = '')
+    {
+        $this->privateKey = new PrivateKey($privateKey);
+        $this->address = $this->privateKey->publicKey->address();
     }
 }

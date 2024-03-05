@@ -1,6 +1,13 @@
 <?php
-namespace Qin\Web3Php\eth_utils;
-class Keccak{
+
+namespace kornrunner;
+
+use Exception;
+use function mb_strlen;
+use function mb_substr;
+
+final class Keccak
+{
     private const KECCAK_ROUNDS = 24;
     private const LFSR = 0x01;
     private const ENCODING = '8bit';
@@ -301,4 +308,5 @@ class Keccak{
 
         return self::keccak($in, $security_level, $outlen, 0x1f, $raw_output);
     }
+
 }

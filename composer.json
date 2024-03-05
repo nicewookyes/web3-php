@@ -17,5 +17,8 @@
             "email": "wenqinchao@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "mdanter/ecc": "^1.0",
+        "kornrunner/keccak": "^1.1"
+    }
 }

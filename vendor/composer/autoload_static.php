@@ -6,17 +6,61 @@ namespace Composer\Autoload;
 
 class ComposerStaticIniteaff09d3a19e5f46942033e43a499af6
 {
+    public static $files = array (
+        '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
+    );
+
     public static $prefixLengthsPsr4 = array (
+        'k' => 
+        array (
+            'kornrunner\\' => 11,
+        ),
+        'T' => 
+        array (
+            'Test\\' => 5,
+        ),
+        'S' => 
+        array (
+            'Symfony\\Polyfill\\Mbstring\\' => 26,
+        ),
         'Q' => 
         array (
             'Qin\\Web3Php\\' => 12,
         ),
+        'M' => 
+        array (
+            'Mdanter\\Ecc\\' => 12,
+        ),
+        'F' => 
+        array (
+            'FG\\' => 3,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
+        'kornrunner\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/kornrunner/keccak/src',
+        ),
+        'Test\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/test',
+        ),
+        'Symfony\\Polyfill\\Mbstring\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/polyfill-mbstring',
+        ),
         'Qin\\Web3Php\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src',
+        ),
+        'Mdanter\\Ecc\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/mdanter/ecc/src',
+        ),
+        'FG\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fgrosse/phpasn1/lib',
         ),
     );
 
