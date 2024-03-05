@@ -1,0 +1,16 @@
+{
+    "name": "qin/web3-php",
+    "description": "Php version of web3",
+    "autoload": {
+        "psr-4": {
+            "Qin\\Web3Php\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Qin",
+            "email": "wenqinchao@gmail.com"
+        }
+    ],
+    "require": {}
+}
