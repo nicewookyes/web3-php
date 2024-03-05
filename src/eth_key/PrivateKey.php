@@ -12,7 +12,7 @@ class PrivateKey{
     {
         $generator = EccFactory::getSecgCurves()->generator256k1();
         if (empty ($privateKey)) {
-            $this->$key = $generator->createPrivateKey();
+            $this->key = $generator->createPrivateKey();
         } else {
             $privateKey = Conversions::removeZeroPrefix($privateKey);
             if (!ctype_xdigit($privateKey)) {
