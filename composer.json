@@ -6,6 +6,11 @@
             "Qin\\Web3Php\\": "src/"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "Test\\": "test/"
+        }
+    },
     "authors": [
         {
             "name": "Qin",
