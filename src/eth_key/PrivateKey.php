@@ -1,6 +1,7 @@
 <?php
 namespace Qin\Web3Php\eth_key;
 use Mdanter\Ecc\EccFactory;
+use Mdanter\Ecc\Serializer\PrivateKey\DerPrivateKeySerializer;
 use Qin\Web3Php\eth_utils\Conversions;
 
 class PrivateKey{
@@ -30,6 +31,8 @@ class PrivateKey{
     }
 
     public function hex(){
+        $derPrivateKeySerializer = new DerPrivateKeySerializer(EccFactory::getAdapter());
+        return $derPrivateKeySerializer->serialize($this->key);
         return $this->key->getSecret();
     }
 }
