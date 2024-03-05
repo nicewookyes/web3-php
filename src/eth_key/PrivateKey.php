@@ -31,6 +31,6 @@ class PrivateKey{
     }
 
     public function hex(){
-        str_pad(gmp_strval($this->key->getSecret(), 16), self::SIZE, '0', STR_PAD_LEFT);
+        return str_pad(gmp_strval($this->key->getSecret(), 16), self::SIZE, '0', STR_PAD_LEFT);
     }
 }
