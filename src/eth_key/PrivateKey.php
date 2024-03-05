@@ -31,8 +31,6 @@ class PrivateKey{
     }
 
     public function hex(){
-        $derPrivateKeySerializer = new DerPrivateKeySerializer();
-        return $derPrivateKeySerializer->serialize($this->key);
-        return $this->key->getSecret();
+        str_pad(gmp_strval($this->key->getSecret(), 16), self::SIZE, '0', STR_PAD_LEFT);
     }
 }
