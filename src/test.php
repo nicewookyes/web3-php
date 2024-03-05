@@ -1,6 +1,9 @@
 <?php
+
+
+
 require_once('eth_utils/Conversions.php');
-//use Qin\Web3Php\eth_utils\Conversions;
+use Qin\Web3Php\eth_utils\Conversions;
 
 echo Conversions::to_bytes("你好啊");
 echo "\n";
