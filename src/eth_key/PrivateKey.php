@@ -31,7 +31,7 @@ class PrivateKey{
     }
 
     public function hex(){
-        $derPrivateKeySerializer = new DerPrivateKeySerializer(EccFactory::getAdapter());
+        $derPrivateKeySerializer = new DerPrivateKeySerializer();
         return $derPrivateKeySerializer->serialize($this->key);
         return $this->key->getSecret();
     }
