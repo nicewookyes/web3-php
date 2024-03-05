@@ -1,5 +1,5 @@
 <?php
-require_once('./src/providers/HttpProvider.php');
+require_once('providers/HttpProvider.php');
 //use Qin\Web3Php\eth_utils\Conversions;
 
 echo Conversions::to_bytes("你好啊");
