@@ -5,6 +5,10 @@ class  Conversions
 {
     public static function to_bytes($text)
     {
-        return mb_convert_encoding($text, 'UTF-8', 'UTF-8');
+        $bytes = array();
+        for ($i = 0; $i < strlen($text); $i++) {
+            $bytes[] = ord($text[$i]);
+        }
+        return $bytes;
     }
 }
