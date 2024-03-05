@@ -2,11 +2,11 @@
 
 
 
-//require_once('eth_utils/Conversions.php');
-//use Qin\Web3Php\eth_utils\Conversions;
-//
-//var_dump(Conversions::to_bytes("你好啊"));
+require_once('eth_utils/Conversions.php');
+use Qin\Web3Php\eth_utils\Conversions;
+
+var_dump(Conversions::to_bytes(random_bytes(32)));
 //echo "\n";
 //var_dump(Conversions::to_bytes("Hello"));
 
-var_dump(random_bytes(32));
+//var_dump(random_bytes(32));
