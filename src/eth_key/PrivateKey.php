@@ -12,7 +12,7 @@ class PrivateKey{
     {
         $generator = EccFactory::getSecgCurves()->generator256k1();
         if (empty ($privateKey)) {
-            $this->privateKey = $generator->createPrivateKey();
+            $this->$key = $generator->createPrivateKey();
         } else {
             $privateKey = Conversions::removeZeroPrefix($privateKey);
             if (!ctype_xdigit($privateKey)) {
@@ -24,8 +24,9 @@ class PrivateKey{
 
             $key = gmp_init($privateKey, 16);
             $this->key = $generator->getPrivateKeyFrom($key);
-            $this->publicKey = new PublicKey($this->key->getPublicKey());
+
         }
+        $this->publicKey = new PublicKey($this->key->getPublicKey());
     }
 
     public function hex(){
