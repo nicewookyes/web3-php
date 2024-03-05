@@ -1,5 +1,5 @@
 <?php
-
-echo \Qin\Web3Php\eth_utils\Conversions::to_bytes("你好啊");
+use \Qin\Web3Php\eth_utils\Conversions;
+echo Conversions::to_bytes("你好啊");
 echo "\n";
-echo \Qin\Web3Php\eth_utils\Conversions::to_bytes("Hello");
+echo Conversions::to_bytes("Hello");
